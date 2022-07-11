@@ -1,8 +1,6 @@
-%global __brp_check_rpaths %{nil}
-
 Name: Hyprland
 Version: v0.6.3beta
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: BSD
 Summary: A dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 Url: https://github.com/hyprwm/Hyprland/
@@ -50,10 +48,11 @@ Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sa
 %autosetup -n %{name}-%{version}
 
 %build
-VERBOSE=1 meson -Dprefix=$RPM_BUILD_ROOT/usr/ _build
+VERBOSE=1 meson -Dprefix=%{_prefix} _build
 VERBOSE=1 ninja -C _build/
 
 %install
+export DESTDIR=%{buildroot}
 VERBOSE=1 ninja -C _build/ install
 
 %files
@@ -160,10 +159,15 @@ VERBOSE=1 ninja -C _build/ install
 /usr/include/wlr/render/wlr_renderer.h
 /usr/include/wlr/render/dmabuf.h
 /usr/include/wlr/render/pixman.h
-/usr/include/wlr/render/vulkan.h
+# /usr/include/wlr/render/vulkan.h
 /usr/include/wlr/render/interface.h
 
 %changelog
+* Tue Jul 12 2022 Bader Zaidan <bader@zaidan.pw> v0.6.3beta-3
+- replace buildroot with prefix
+- add DESTDIR
+- comment out vulkan
+
 * Mon Jul 11 2022 Bader Zaidan <bader@zaidan.pw> v0.6.3beta-2
 - Uncomment vulkan
 
