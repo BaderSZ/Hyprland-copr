@@ -2,7 +2,7 @@
 
 Name: Hyprland
 Version: v0.6.3beta
-Release: 0%{?dist}
+Release: 1%{?dist}
 License: BSD
 Summary: A dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 Url: https://github.com/hyprwm/Hyprland/
@@ -164,3 +164,6 @@ VERBOSE=1 ninja -C _build/ install
 /usr/include/wlr/render/interface.h
 
 %changelog
+* Mon Jul 11 2022 Bader Zaidan <bader@zaidan.pw> v0.6.3beta-1
+- new package built with tito
+
