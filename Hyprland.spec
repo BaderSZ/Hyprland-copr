@@ -1,6 +1,6 @@
 Name: Hyprland
 Version: v0.6.3beta
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: BSD
 Summary: A dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 Url: https://github.com/hyprwm/Hyprland/
@@ -36,9 +36,10 @@ BuildRequires: libseat-devel
 BuildRequires: mesa-libEGL-devel
 BuildRequires: libinput-devel
 BuildRequires: xcb-util-wm-devel
+BuildRequires: xcb-util-renderutil-devel
+BuildRequires: xcb-util-errors
 BuildRequires: xorg-x11-server-Xwayland-devel
 BuildRequires: mesa-libgbm-devel
-BuildRequires: xcb-util-renderutil-devel
 BuildRequires: glslang-devel
 
 %description
@@ -163,6 +164,9 @@ VERBOSE=1 ninja -C _build/ install
 /usr/include/wlr/render/interface.h
 
 %changelog
+* Tue Jul 12 2022 Bader Zaidan <bader@zaidan.pw> v0.6.3beta-4
+- 
+
 * Tue Jul 12 2022 Bader Zaidan <bader@zaidan.pw> v0.6.3beta-3
 - replace buildroot with prefix
 - add DESTDIR
