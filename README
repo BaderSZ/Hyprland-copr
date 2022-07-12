@@ -1,0 +1,8 @@
+Hyprland copr and tito configs.
+
+Note: you must have xcb-util-errors available:
+
+```
+  dnf copr enable bzaidan/Hyprland
+  dnf install xcb-util-errors
+```
