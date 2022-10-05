@@ -6,8 +6,8 @@ Summary: A dynamic tiling Wayland compositor that doesn't sacrifice on its looks
 Url: https://github.com/hyprwm/Hyprland/
 
 # Since tito support for submodules is iffy, we need to package manually.
-# commit ae096219e83b1a90990f2277b5a9302a3e943d84
-# sha256sum Hyprland-v0.6.3beta.tar.gz =  a7c9c6cae4989cb2cbf46e5003ce36790524d2b6e50fee8e38ad1e92c3e4a49e
+# commit ff5843bd85c60a3e3a7d21f26f78c8604dbba63f
+# sha256sum Hyprland-v0.15.0beta.tar.gz =  854c026fecdf4a311d24ec4e3922cffffc6fc1f9f2003fa360fd228140e7bc61
 # Sources can be obtained by:
 #   git clone --recursive https://github.com/hyprwm/Hyprland/ --branch v0.15.0beta
 #   find Hyprland/ -name ".git*" -exec rm {} \;
