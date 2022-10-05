@@ -9,10 +9,10 @@ Url: https://github.com/hyprwm/Hyprland/
 # commit ae096219e83b1a90990f2277b5a9302a3e943d84
 # sha256sum Hyprland-v0.6.3beta.tar.gz =  a7c9c6cae4989cb2cbf46e5003ce36790524d2b6e50fee8e38ad1e92c3e4a49e
 # Sources can be obtained by:
-#   git clone --recursive https://github.com/hyprwm/Hyprland/ --branch v0.6.3beta
+#   git clone --recursive https://github.com/hyprwm/Hyprland/ --branch v0.15.0beta
 #   find Hyprland/ -name ".git*" -exec rm {} \;
-#   mv Hyprland/ Hyprland-v0.6.3beta/
-#   tar cvzf Hyprland-v0.6.3beta.tar.gz Hyprland-v0.6.3beta/
+#   mv Hyprland/ Hyprland-v0.15.0beta/
+#   tar cvzf v0.15.0beta.tar.gz Hyprland-v0.15.0beta/
 
 Source0: https://github.com/hyprwm/Hyprland/archive/refs/tags/%{version}.tar.gz
 
