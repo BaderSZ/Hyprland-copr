@@ -162,6 +162,10 @@ VERBOSE=1 ninja -C _build/ install
 /usr/include/wlr/render/pixman.h
 # /usr/include/wlr/render/vulkan.h
 /usr/include/wlr/render/interface.h
+/usr/include/wlr/types/wlr_damage_ring.h
+/usr/include/wlr/types/wlr_single_pixel_buffer_v1.h
+/usr/share/man/man1/Hyprland.1.gz
+/usr/share/man/man1/hyprctl.1.gz
 
 %changelog
 * Wed Oct 05 2022 Bader Zaidan <bader@zaidan.pw> v0.15.0beta-6
