@@ -1,20 +1,17 @@
 Name: Hyprland
-Version: v0.15.0beta
+Version: v0.20.1beta
 Release: 8%{?dist}
 License: BSD
 Summary: A dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
-Url: https://github.com/hyprwm/Hyprland/
+Url: https://github.com/hyprwm/Hyprland
 
 # Since tito support for submodules is iffy, we need to package manually.
-# commit ff5843bd85c60a3e3a7d21f26f78c8604dbba63f
-# sha256sum Hyprland-v0.15.0beta.tar.gz =  854c026fecdf4a311d24ec4e3922cffffc6fc1f9f2003fa360fd228140e7bc61
 # Sources can be obtained by:
-#   git clone --recursive https://github.com/hyprwm/Hyprland/ --branch v0.15.0beta
-#   find Hyprland/ -name ".git*" -exec rm {} \;
-#   mv Hyprland/ Hyprland-v0.15.0beta/
-#   tar cvzf v0.15.0beta.tar.gz Hyprland-v0.15.0beta/
+# 	wget -c https://github.com/hyprwm/Hyprland/releases/download/v0.20.1beta/source-v0.20.1beta.tar.gz
+# sha512sum source-v0.20.1beta.tar.gz
+# 0aa98738702903ae49f020ad319c745e926a35732f6fe45efaede38582d76104936ac631d82940db2c70e8865d7a8fe04e1e726c6486b11dce5a0915160c3e9a 
 
-Source0: https://github.com/hyprwm/Hyprland/archive/refs/tags/%{version}.tar.gz
+Source0: https://github.com/hyprwm/Hyprland/releases/download/v0.20.1beta/source-%{version}.tar.gz
 
 ExclusiveArch: x86_64
 
@@ -22,6 +19,7 @@ BuildRequires: ninja-build
 BuildRequires: cmake
 BuildRequires: meson
 BuildRequires: gcc-c++
+BuildRequires: jq
 BuildRequires: libxcb-devel
 BuildRequires: libX11-devel
 BuildRequires: pixman-devel
@@ -46,7 +44,7 @@ BuildRequires: glslang-devel
 Hyprland is a dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks.
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -n %{name}-source
 
 %build
 VERBOSE=1 meson -Dprefix=%{_prefix} _build
