@@ -101,7 +101,7 @@ VERBOSE=1 ninja -C _build/ install
 %{_includedir}/wlr/render/gles2.h
 %{_includedir}/wlr/render/interface.h
 %{_includedir}/wlr/render/pixman.h
-# %{_includedir}/wlr/render/vulkan.h
+## {_includedir/wlr/render/vulkan.h
 %{_includedir}/wlr/render/wlr_renderer.h
 %{_includedir}/wlr/render/wlr_texture.h
 %{_includedir}/wlr/types/wlr_buffer.h
