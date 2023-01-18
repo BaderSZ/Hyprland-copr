@@ -15,6 +15,15 @@ Source0: https://github.com/hyprwm/Hyprland/releases/download/v0.20.1beta/source
 
 ExclusiveArch: x86_64
 
+Requires: libwayland-server
+Requires: libwayland-client
+Recommends: kitty
+Recommends: pipewire
+Recommends: dunst
+Recommends: qt5-qtwayland
+Suggests: wofi
+## TODO:
+# Recommends: vulkan-renderer
 BuildRequires: ninja-build
 BuildRequires: cmake
 BuildRequires: meson
